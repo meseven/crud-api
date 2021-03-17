@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
 
 module.exports = () => {
-  mongoose.connect(process.env.MONGODB_STRING, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  });
+  mongoose.connect(
+    'mongodb+srv://root:123456ff@cluster0.mlcqh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false,
+    },
+  );
 
   mongoose.connection.on('open', () => {
     console.log('MongoDB: Connected');
