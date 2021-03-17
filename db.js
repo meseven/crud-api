@@ -4,6 +4,7 @@ module.exports = () => {
   mongoose.connect(process.env.MONGODB_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,
   });
 
   mongoose.connection.on('open', () => {

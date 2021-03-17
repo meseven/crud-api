@@ -9,8 +9,8 @@ router.post('/', async (req, res, next) => {
     // await validations.validateAsync(req.body);
 
     const book = new Book(req.body);
-    await book.save();
-    res.json(req.body);
+    const saveBook = await book.save();
+    res.json(saveBook);
   } catch (e) {
     console.log(e);
     next(e);
@@ -65,6 +65,7 @@ router.put('/:id', async (req, res, next) => {
     const updatedData = await Book.findByIdAndUpdate(id, req.body, {
       new: true,
     });
+
     res.json(updatedData);
   } catch (e) {
     console.log(e);
