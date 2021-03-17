@@ -6,7 +6,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-// require('./db')();
+require('./db')();
 
 const indexRouter = require('./routes');
 const booksRouter = require('./routes/books');

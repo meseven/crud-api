@@ -6,7 +6,7 @@ module.exports = () => {
     useUnifiedTopology: true,
   });
 
-  mongoose.connection.on('connect', () => {
+  mongoose.connection.on('open', () => {
     console.log('MongoDB: Connected');
   });
 
