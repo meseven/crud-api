@@ -1,8 +1,6 @@
 language: node_js
 node_js:
   - 12
-env:
-  - MONGODB_STRING=$MONGODB_STRING
 before_install:
   - npm install
 script:
