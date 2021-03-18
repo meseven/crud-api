@@ -3,8 +3,6 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 module.exports = () => {
-  console.log('process.env', process.env);
-
   mongoose.connect(
     'mongodb+srv://root:123456ff@cluster0.mlcqh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
     {
