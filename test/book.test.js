@@ -39,7 +39,7 @@ describe('/books endpoint testleri', () => {
       .request(server)
       .get('/books')
       .end((err, res) => {
-        res.should.have.status(400);
+        res.should.have.status(200);
         res.body.should.be.a('array');
         done();
       });
