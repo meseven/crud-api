@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
 
+const envCi = require('env-ci');
+
+console.log(envCi());
+
 module.exports = () => {
   console.log('MongoString:', process.env.MONGODB_STRING);
   console.log('node_env:', process.env.NODE_ENV);
