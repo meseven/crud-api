@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 module.exports = () => {
   console.log('MongoString:', process.env.MONGODB_STRING);
+  console.log('node_env:', process.env.NODE_ENV);
 
   mongoose.connect(process.env.MONGODB_STRING, {
     useNewUrlParser: true,
