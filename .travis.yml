@@ -1,12 +1,9 @@
 language: node_js
-sudo: required
-cache:
-  directories:
-    - node_modules
 node_js:
   - 12
+env:
+  - MONGODB_STRING=$MONGODB_STRING
 before_install:
   - npm install
-  - export NODE_ENV=production
 script:
   - npm run test
