@@ -1,12 +1,9 @@
 const mongoose = require('mongoose');
 
-const envCi = require('env-ci');
-
-console.log(envCi());
+require('dotenv').config();
 
 module.exports = () => {
-  console.log('MongoString:', process.env.MONGODB_STRING);
-  console.log('node_env:', process.env.NODE_ENV);
+  console.log('process.env', process.env);
 
   mongoose.connect(process.env.MONGODB_STRING, {
     useNewUrlParser: true,
